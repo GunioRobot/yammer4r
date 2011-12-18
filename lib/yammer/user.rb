@@ -1,10 +1,10 @@
 class Yammer::User
-  extend Forwardable 
+  extend Forwardable
   def_delegator :@user, :id
 
   def initialize(mash, client)
     @user   = mash
-    @client = client 
+    @client = client
   end
 
   def me?

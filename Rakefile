@@ -1,5 +1,5 @@
 $:.unshift(File.join(File.dirname(__FILE__), 'lib'))
- 
+
 require 'rubygems'
 require 'rake'
 require 'spec/rake/spectask'

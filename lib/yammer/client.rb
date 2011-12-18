@@ -2,7 +2,7 @@ module Yammer
   class Client
     def initialize(options={})
       options.assert_has_keys(:consumer, :access) unless options.has_key?(:config)
-      
+
       yammer_url = options.delete(:yammer_host) || "https://www.yammer.com"
       @api_path   = "/api/v1/"
 
@@ -18,7 +18,7 @@ module Yammer
     end
 
 
-    # TODO: modularize message and user handling 
+    # TODO: modularize message and user handling
     def messages(action = :all, params = {})
       params.merge!(:resource => :messages)
       params.merge!(:action => action) unless action == :all
@@ -93,7 +93,7 @@ module Yammer
           raise "503: Service Unavailable"
         else
           raise "Error. HTTP Response #{response.code}"
-        end   
+        end
     end
 
   end
